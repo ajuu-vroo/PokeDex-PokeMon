@@ -7,7 +7,7 @@ export default function Home() {
   const router = useRouter(); 
 
   return ( 
-    <div className='bg-img h-screen'>
+    <div className='h-screen w-full'>
     <div className="mx-auto w-96 flex-column h-96 pt-10" >
 
       <h1 className='text-center text-4xl pt-10 font-extrabold text-red-800'>Welcome to Pokedex.</h1>
