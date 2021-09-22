@@ -58,7 +58,7 @@ function Id({ data }) {
 
                     {data.types.map((item, index) => {
                         let icon = iconTypeFinder(item)
-                        return <h4>{index + 1 + ". "}{item.type.name.toUpperCase() + icon}</h4>
+                        return <h4 key={index}>{index + 1 + ". "}{item.type.name.toUpperCase() + icon}</h4>
 
                     })}
 
@@ -67,8 +67,8 @@ function Id({ data }) {
             <div className='mt-2 flex pl-10'>
                 <h2>Top Moves ➣ </h2>
                 <div>
-                    <h4>{"1. "}{data.moves[0].move.name.toUpperCase()}</h4>
-                    <h4>{"2. "}{data.moves[1].move.name.toUpperCase()}</h4>
+                    <h4>{"1. "}{data?.moves[0]?.move.name.toUpperCase()}</h4>
+                    <h4>{"2. "}{data?.moves[1]?.move.name.toUpperCase()}</h4>
                 </div>
             </div>
             <div className='mt-2 flex pl-10'>
@@ -101,7 +101,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const rawData = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=800`)
+    const rawData = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=384`)
     const data = await rawData.json()
     const paths = data.results.map((id,index) =>({
         params: {id: (index+1).toString()},

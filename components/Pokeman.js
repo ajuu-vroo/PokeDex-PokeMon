@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 import Head from 'next/head'
 
-function Pokeman({ img, name, url }) {
+function Pokeman({ img, name, url}) {
 
     return (<>
 

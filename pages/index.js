@@ -12,7 +12,7 @@ export default function Home() {
 
       <h1 className='text-center text-4xl pt-10 font-extrabold text-red-800'>Welcome to Pokedex.</h1>
       <div className="ml-10 ">
-      <Image src="/../public/images/pokeball-pokemon-ball-png-images-4.png" alt=""
+      <Image src="/images/pokeball-pokemon-ball-png-images-4.png" alt=""
       width={300}
       height={300}
       className="animate-spin"/>
