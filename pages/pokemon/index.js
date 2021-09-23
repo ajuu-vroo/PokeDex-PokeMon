@@ -20,7 +20,7 @@ function Pokemon({ result }) {
 
             {searched 
             ? result.map((item, index) => {
-                if(searched.includes(item.name)){
+                if(searched.toUpperCase().includes(item.name.toUpperCase())){
                 return <Pokeman img={item.img} url={index} name={item.name} key={index} />}
 
             })
